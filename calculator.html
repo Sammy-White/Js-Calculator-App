@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        
+        table {
+            width: 310px;
+            margin: 50px auto;
+            background: orangered;
+            border: none;
+            border-radius: 10px;
+            padding: 0px 20px 20px;
+        }
+        .heading{
+            color: white;
+            font-size: 130%;
+            text-align: center;
+        }
+        #input, #answer {
+            width: 260px;
+            height: 50px;
+            font-size: 130%;
+            border: none;
+        }
+        #answer{
+            text-align: right;
+            border-radius:0px 0px 5px 5px ;
+            box-shadow: 2px 2px 2px black;
+            color: #1e1e1e;
+        }
+        #input{
+            border-radius:5px 5px 0px 0px ;
+            box-shadow: 2px 2px 2px black;
+            color: #1e1e1e;
+        }
+
+        input[type=button] {
+            height: 60px;
+            width: 60px;
+            color: blue;
+            font-size: 25px;
+            background-color: white;
+            margin: 1px;
+            border-radius: 8px;
+            border: none;
+        }
+        input[type=button]:hover{
+            background-color: #cbcbcb;
+            cursor: pointer;
+        }
+
+
+        /* .cal{
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 10px 0px 5px 0px;
+            max-width: fit-content;
+        }
+        input{
+            width: 210px;
+            height: 20px;
+            text-align: right;
+        }
+        button{
+            width: 50px;
+        } */
+    </style>
+</head>
+<body>
+    <table>
+        <!--Head section-->
+        <tr>
+            <tr>
+                <td class="heading">
+        
+                </td>
+            </tr>
+            <td>
+                <input type="text" id="input"  placeholder="0" readonly="readonly">
+                <input type="text"  id="answer" placeholder="0" readonly="readonly" style="color: green;">
+                <!-- <h3 id="result"></h3> -->
+            </td>
+        </tr>
+        <!--Buttons Section of the calcualtor-->
+        <tr>
+            <td>
+                <br>
+                <input type="button" value="1" onclick="getNumber('1')">
+                <input type="button" value="2" onclick="getNumber('2')">
+                <input type="button" value="3" onclick="getNumber('3')">
+                <input type="button" value="+" onclick="getOperand('+')">
+                <br>
+                <input type="button" value="4" onclick="getNumber('4')">
+                <input type="button" value="5" onclick="getNumber('5')">
+                <input type="button" value="6" onclick="getNumber('6')">
+                <input type="button" value="-" onclick="getOperand('-')">
+                <br>
+                <input type="button" value="7" onclick="getNumber('7')">
+                <input type="button" value="8" onclick="getNumber('8')">
+                <input type="button" value="9" onclick="getNumber('9')">
+                <input type="button" value="&#247" onclick="getOperand('/')">
+                <br>
+                <input type="button" value="0" onclick="getNumber('0')">
+                <input type="button" value="." onclick="getNumber('.')">
+                <input type="button" value="&#8592" onclick="backspace()" style="color: red;">
+                <input type="button" value="x" onclick="getOperand('x')">
+                <br>
+                <input type="button" value="CE" onclick="clearScreen()" style="background-color: red; color: white;">
+                
+                <input type="button" value="=" onclick="compute()" style="width: 190px; color: white; background-color: black;">
+            </td>
+        </tr>
+    </table>
+    <script src="calculator.js"></script>
+
+    <!-- <div class="cal">
+        <div class="output">
+            <form action="" id="input_form">
+            <input type="text" id="sign" name="display" value="" readonly="readonly"><br>
+            <input type="text" id="result" name="output" value="0" readonly="readonly">
+            </form>
+        </div>
+        <div class="button">
+            <button id="btn1" onclick="numone('')"><b>1</b> </button>
+            <button id="btn2" onclick="insert('2')"><b>2</b></button>
+            <button id="btn" onclick="insert('3')"><b>3</b></button>
+            <button id="btn" onclick="operator('+')"><b>+</b></button><br>
+            <button id="btn" onclick=""><b>4</b></button>
+            <button id="btn" onclick=""><b>5</b></button>
+            <button id="btn" onclick=""><b>6</b></button>
+            <button id="btn" onclick=""><b>-</b></button><br>
+            <button id="btn" onclick=""><b>7</b></button>
+            <button id="btn" onclick=""><b>8</b></button>
+            <button id="btn" onclick=""><b>9</b></button>
+            <button id="btn" onclick=""><b>x</b></button><br>
+            <button id="btn" onclick=""><b>0</b></button>
+            <button id="btn" onclick=""><b>.</b></button>
+            <button id="btn" onclick="equal()"><b>=</b></button>
+            <button id="btn" onclick=""><b>&#247;</b></button><br>
+            <button id="btn" onclick=""><b>C</b></button>
+        </div>
+        
+        </div> -->
+    
+</body>
+</html>
